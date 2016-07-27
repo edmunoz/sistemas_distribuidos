@@ -1,0 +1,40 @@
+2016-07-26 02:35:28,329 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@7e542721: startup date [Tue Jul 26 02:35:28 ECT 2016]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2016-07-26 02:35:29,766 | INFO  | PListStore:[/opt/lampp/htdocs/sistemas_distribuidos/apache-activemq-5.9.0/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2016-07-26 02:35:29,795 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/lampp/htdocs/sistemas_distribuidos/apache-activemq-5.9.0/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2016-07-26 02:35:30,203 | INFO  | Apache ActiveMQ 5.9.0 (localhost, ID:Lenovo-G40-70-42760-1469518530071-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2016-07-26 02:35:30,218 | INFO  | Listening for connections at: tcp://Lenovo-G40-70:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2016-07-26 02:35:30,222 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2016-07-26 02:35:30,228 | INFO  | Listening for connections at: amqp://Lenovo-G40-70:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2016-07-26 02:35:30,232 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2016-07-26 02:35:30,237 | INFO  | Listening for connections at: stomp://Lenovo-G40-70:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2016-07-26 02:35:30,239 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2016-07-26 02:35:30,243 | INFO  | Listening for connections at: mqtt://Lenovo-G40-70:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2016-07-26 02:35:30,245 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2016-07-26 02:35:30,383 | INFO  | Listening for connections at ws://Lenovo-G40-70:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2016-07-26 02:35:30,384 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2016-07-26 02:35:30,385 | INFO  | Apache ActiveMQ 5.9.0 (localhost, ID:Lenovo-G40-70-42760-1469518530071-0:1) started | org.apache.activemq.broker.BrokerService | main
+2016-07-26 02:35:30,386 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2016-07-26 02:35:30,388 | WARN  | Store limit is 102400 mb, whilst the data directory: /opt/lampp/htdocs/sistemas_distribuidos/apache-activemq-5.9.0/data/kahadb only has 12604 mb of usable space - resetting to maximum available disk space: 12604 mb | org.apache.activemq.broker.BrokerService | main
+2016-07-26 02:35:30,390 | ERROR | Temporary Store limit is 51200 mb, whilst the temporary data directory: /opt/lampp/htdocs/sistemas_distribuidos/apache-activemq-5.9.0/data/localhost/tmp_storage only has 12604 mb of usable space - resetting to maximum available 12604 mb. | org.apache.activemq.broker.BrokerService | main
+2016-07-26 02:35:30,784 | INFO  | Welcome to hawtio 1.2-M23 : http://hawt.io/ : Don't cha wish your console was hawt like me? ;-) | io.hawt.jmx.JmxTreeWatcher | main
+2016-07-26 02:35:30,789 | INFO  | Starting hawtio authentication filter, JAAS realm: "activemq" authorized role: "admins" role principal classes: "org.apache.activemq.jaas.GroupPrincipal" | io.hawt.web.AuthenticationFilter | main
+2016-07-26 02:35:30,830 | INFO  | Using file upload directory: /opt/lampp/htdocs/sistemas_distribuidos/apache-activemq-5.9.0/tmp/uploads | io.hawt.web.UploadServlet | main
+2016-07-26 02:35:30,842 | INFO  | jolokia-agent: Using access restrictor classpath:/jolokia-access.xml | /hawtio | main
+2016-07-26 02:35:31,047 | INFO  | ActiveMQ WebConsole available at http://localhost:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2016-07-26 02:35:31,072 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2016-07-26 02:52:43,016 | INFO  | Apache ActiveMQ 5.9.0 (localhost, ID:Lenovo-G40-70-42760-1469518530071-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2016-07-26 02:52:45,191 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2016-07-26 02:52:45,233 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2016-07-26 02:52:47,235 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2016-07-26 02:52:49,237 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2016-07-26 02:52:49,958 | WARN  | 5 threads could not be stopped | org.eclipse.jetty.util.thread.QueuedThreadPool | ActiveMQ ShutdownHook
+2016-07-26 02:52:49,964 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2016-07-26 02:52:50,405 | INFO  | PListStore:[/opt/lampp/htdocs/sistemas_distribuidos/apache-activemq-5.9.0/data/localhost/tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2016-07-26 02:52:50,406 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2016-07-26 02:52:50,406 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2016-07-26 02:52:50,415 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2016-07-26 02:52:52,121 | INFO  | Apache ActiveMQ 5.9.0 (localhost, ID:Lenovo-G40-70-42760-1469518530071-0:1) uptime 17 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2016-07-26 02:52:52,122 | INFO  | Apache ActiveMQ 5.9.0 (localhost, ID:Lenovo-G40-70-42760-1469518530071-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2016-07-26 02:52:52,123 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@7e542721: startup date [Tue Jul 26 02:35:28 ECT 2016]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2016-07-26 02:52:52,548 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2016-07-26 02:52:52,653 | INFO  | Destroying hawtio authentication filter | io.hawt.web.AuthenticationFilter | ActiveMQ ShutdownHook

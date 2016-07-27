@@ -1,0 +1,14 @@
+<ul class="nav nav-tabs" ng-controller="Core.NavBarController">
+  <li ng-class='{active : isActive("#/jetty/server")}'>
+    <a ng-href="{{link('#/jetty/server')}}">Server</a>
+  </li>
+  <li ng-class='{active : isActive("#/jetty/applications")}'>
+    <a ng-href="{{link('#/jetty/applications')}}">Applications</a>
+  </li>
+  <li ng-class='{active : isActive("#/jetty/connectors")}'>
+    <a ng-href="{{link('#/jetty/connectors')}}">Connectors</a>
+  </li>
+  <li ng-class='{active : isTopTabActive("jettyTree")}'>
+    <a ng-href="#/jmx/attributes?tab=jettyTree{{hash}}">JMX</a>
+  </li>
+</ul>

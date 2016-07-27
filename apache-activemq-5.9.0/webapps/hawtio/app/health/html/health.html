@@ -1,0 +1,28 @@
+<script type="text/ng-template" id="healthEventTemplate">
+  <table class="table table-striped">
+      <tbody>
+      <tr ng-repeat="(key, value) in row">
+        <td class="property-name">{{key | humanize}}</td>
+        <td class="property-value">{{value}}</td>
+      </tr>
+      </tbody>
+  </table>
+</script>
+
+<div class="controller-section" ng-controller="Health.HealthController">
+
+  <table cellpadding="0" cellspacing="0" border="0" class="table table-condensed table-bordered table-hover"
+         id="grid">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Level</th>
+      <th>Domain</th>
+      <th>Kind</th>
+      <th>Message</th>
+    </tr>
+    </thead>
+    <tbody>
+  </table>
+
+</div>
