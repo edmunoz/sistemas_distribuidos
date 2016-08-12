@@ -19,3 +19,7 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::post('list_documents_by_type','HomeController@list_documents_by_type');
+Route::post('list_documents','HomeController@list_documents');
+Route::post('list_types','HomeController@list_types');
