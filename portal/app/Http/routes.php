@@ -24,8 +24,7 @@ Route::post('list_documents_by_type','HomeController@list_documents_by_type');
 Route::post('list_documents','HomeController@list_documents');
 Route::post('list_types','HomeController@list_types');
 
-Route::get('/descargar_pdf', 'PDFController@descargar_pdf');
+Route::post('descargar_xml', 'PDFController@descargar_xml');
 
-Route::get('/hola', function () {
-    return 'Hello World';
-});
+Route::post('descargar_pdf', 'PDFController@descargar_pdf');
+

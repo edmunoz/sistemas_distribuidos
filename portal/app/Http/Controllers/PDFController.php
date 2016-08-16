@@ -1,32 +1,51 @@
 <?php namespace App\Http\Controllers;
 
+use App\Document;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\DB;
 use PDF;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Response;
 
 class PDFController extends Controller {
 
     /**
      * @return mixed
      */
-    public function descargar_pdf(){
-      $documento_pdf = DB::table('documents')
-          ->select('documento_xml')
-          ->where('id', '=', 1)
-          ->get();
-        $filename = 'nombre';
-        $headers = array('Content-Type: text/xml',
-            'Content-Disposition:attachment; filename="cv.xml"',);
+    public function descargar_xml(Request $request){
+        $documento_xml = Document::select('documento_xml')
+            ->where('id', '=', 17)
+            ->first()
+            ->toArray();
 
-
-        //return response()->make(base64_decode($documento_pdf), 'nombre.pdf', $headers);
-        //return response()->make($documento_pdf, 200)->header('Content-Type', 'application/xml');
-        return response()->download($documento_pdf, 'output.xml', ['Content-Type: application/xml']);
-
+        $file = public_path();
+        if ($request->ajax())
+        {
+            return array_flatten($documento_xml)[0];
+        }
   }
+
+    public function descargar_pdf(Request $request)
+    {
+        $documento_pdf = null;
+        try {
+            $documento_pdf = Document::select('documento_pdf')
+                ->where('id', '=', 17)
+                ->first()
+                ->toArray();
+        } catch (\Exception $e) {
+            Log::error
+            (
+                "\nArchivo: " . $e->getFile() .
+                "\nLínea  : " . $e->getLine() .
+                "\nMensaje: " . $e->getMessage()
+            );
+        }
+        if ($request->ajax()) {
+            return array_flatten($documento_pdf)[0];
+        }
+    }
 
 }
