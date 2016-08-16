@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Type;
+use FuseSource\Stomp\Stomp;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -62,6 +63,15 @@ class HomeController extends Controller
     public function list_documents()
     {
         try {
+            $queue  = 'ActiveMQ';
+            $msg    = 'ActiveMQ with PHP';
+            $stomp = new Stomp('tcp://localhost:8161');
+            for($i=0; $i<4, $i ++;){
+                $stomp->send($queue, $msg);
+                sleep(1);
+            }
+            
+            
             $user = Auth::user();
             $documents = DB::table('documents')
                 ->select('documents.id', 'fecha_creacion', 'nombre_comprobante', 'numero', 'documento_pdf', 'documento_xml')

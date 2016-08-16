@@ -71,6 +71,12 @@ return [
 			'queue'  => 'default',
 			'expire' => 60,
 		],
+		'stomp' => [
+			'driver'     => 'stomp',
+			'broker_url' => 'tcp://localhost:8161',
+			'queue'      => 'default',
+			'system'     => 'activemq'
+		]
 
 	],
 

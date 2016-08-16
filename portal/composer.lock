@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "be370eee8a5429d868e1be9626e65bb1",
-    "content-hash": "36490a75a5138f8ef13c9303371b475b",
+    "hash": "00d0508700778b71da10b9fb6d62add5",
+    "content-hash": "85712e4298733ed496460f3f206e3723",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -426,6 +426,56 @@
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
             "time": "2015-12-07 04:07:13"
+        },
+        {
+            "name": "fusesource/stomp-php",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dejanb/stomp-php.git",
+                "reference": "4ac51c0abee05078e198faf13f48c056a72f8f8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dejanb/stomp-php/zipball/4ac51c0abee05078e198faf13f48c056a72f8f8c",
+                "reference": "4ac51c0abee05078e198faf13f48c056a72f8f8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FuseSource": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Dejan Bosnanac",
+                    "email": "dejan@nighttale.net",
+                    "homepage": "http://www.nighttale.net"
+                },
+                {
+                    "name": "Sören Rohweder",
+                    "email": "s.rohweder@blage.net",
+                    "homepage": "http://www.monofone.de"
+                }
+            ],
+            "description": "stomp support for PHP",
+            "homepage": "http://github.com/dejanb/stomp-php",
+            "keywords": [
+                "activeMQ",
+                "jms",
+                "messaging",
+                "stomp"
+            ],
+            "abandoned": "stomp-php/stomp-php",
+            "time": "2013-02-23 17:34:44"
         },
         {
             "name": "ircmaxell/password-compat",
