@@ -136,7 +136,6 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', // Laravel IDE helper
-        'Barryvdh\DomPDF\ServiceProvider',
 
 
 
@@ -196,7 +195,6 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-        'PDF'       => 'Barryvdh\DomPDF\Facade',
 
 	],
 

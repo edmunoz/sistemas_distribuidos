@@ -14,7 +14,6 @@
                               id="form-filter">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="form-group">
-                                <button id='myButton' value='3' class='btn btn-success'>Ejemplo</button>
                                 <label class="col-md-4 control-label">Tipo Documento</label>
                                 <div class="col-md-6">
                                     <select class="form-control" name="types">
