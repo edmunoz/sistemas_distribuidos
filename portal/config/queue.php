@@ -16,7 +16,7 @@ return [
 	|
 	*/
 
-	'default' => env('QUEUE_DRIVER', 'sync'),
+	'default' => env('QUEUE_DRIVER', 'redis'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -71,6 +71,7 @@ return [
 			'queue'  => 'default',
 			'expire' => 60,
 		],
+
 		'stomp' => [
 			'driver'     => 'stomp',
 			'broker_url' => 'tcp://localhost:8161',

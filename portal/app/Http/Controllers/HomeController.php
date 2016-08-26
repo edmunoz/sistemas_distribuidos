@@ -1,11 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+use App\Commands\SendDocuments;
 use App\Type;
-use FuseSource\Stomp\Stomp;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Queue;
 
 class HomeController extends Controller
 {
@@ -63,15 +64,6 @@ class HomeController extends Controller
     public function list_documents()
     {
         try {
-            $queue  = 'ActiveMQ';
-            $msg    = 'ActiveMQ with PHP';
-            $stomp = new Stomp('tcp://localhost:8161');
-            for($i=0; $i<4, $i ++;){
-                $stomp->send($queue, $msg);
-                sleep(1);
-            }
-            
-            
             $user = Auth::user();
             $documents = DB::table('documents')
                 ->select('documents.id', 'fecha_creacion', 'nombre_comprobante', 'numero', 'documento_pdf', 'documento_xml')
@@ -79,6 +71,11 @@ class HomeController extends Controller
                 ->where('documents.users_id', '=', $user->id)
                 ->orderBy('fecha_creacion','desc')
                 ->get();
+            foreach ($documents as $document)
+            {
+                Queue::push(new SendDocuments($document));
+                //$this->dispatch(new SendDocuments($document));
+            }
         } catch (\Exception $e) {
             Log::error
             (

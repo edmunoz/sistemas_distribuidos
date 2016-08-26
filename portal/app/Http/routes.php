@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+//Route::get('/', 'WelcomeController@index');
+
+Route::get('/', function (){
+	$redis = app()->make('redis');
+	$redis->set('key1', 'testValue');
+	return $redis->get('key1');
+	//print_r(app()->make('redis'));
+});
+
 
 Route::get('home', 'HomeController@index');
 
